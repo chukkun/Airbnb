@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Search Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 200vh; /* To enable scrolling */
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        /* Navbar container */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        /* Shrink effect when scrolling */
+        .navbar.shrink {
+            padding: 10px 0;
+        }
+
+        /* Search Bar Styling */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 50px;
+            padding: 12px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            width: 650px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar.shrink .search-bar {
+            width: 500px; /* Reduce width when shrinking */
+            padding: 8px;
+        }
+
+        .search-bar div {
+            flex: 1;
+            padding: 5px 15px;
+        }
+
+        .search-bar div:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
+
+        .search-bar div span {
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .search-bar div p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .search-button {
+            background: #ff385c;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background: #d40040;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar" id="navbar">
+        <div class="search-bar">
+            <div>
+                <span>Where</span>
+                <p>Search destinations</p>
+            </div>
+            <div>
+                <span>Check in</span>
+                <p>Add dates</p>
+            </div>
+            <div>
+                <span>Check out</span>
+                <p>Add dates</p>
+            </div>
+            <div>
+                <span>Who</span>
+                <p>Add guests</p>
+            </div>
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("shrink");
+            } else {
+                navbar.classList.remove("shrink");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.logo {
+    height: 60px;
+    width: 110px;
+
+}
+
+.logoi {
+    height: 60px;
+    width: 80px;
+    padding: 1px;
+}
+
+.hover-effect {
+    transition: background-color 0.3s ease;
+}
+
+.hover-effect:hover {
+    background-color: #e0e0e0 !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Category Bar */
+.category-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 0;
+    scrollbar-width: none;
+    position: relative;
+    margin-left: 0;
+    /* Remove left margin */
+}
+
+.category-container::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    text-align: center;
+    flex: 0 0 auto;
+    font-size: 14px;
+    color: #6b6b6b;
+    cursor: pointer;
+    padding: 0 12px;
+    /* Adjust padding for better spacing */
+    text-decoration: none;
+}
+
+.category-item i {
+    font-size: 20px;
+    /* Reduced icon size */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.category-item.active {
+    color: black;
+    font-weight: bold;
+}
+
+.category-item.active::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: black;
+    margin: auto;
+    margin-top: 5px;
+}
+
+/* Left & Right Navigation Buttons */
+.nav-btn {
+    background: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+/* Filter & Toggle */
+.filter-btn,
+.toggle-switch {
+    border: 1px solid #ddd;
+    padding: 7px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    margin-left: 10px;
+}
+
+/* Custom Toggle Switch */
+.form-check-input {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    /* Default background */
+    border-radius: 4px;
+    /* Square border */
+    border: 2px solid #6b6b6b;
+    /* Gray border */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Box shadow */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-check-input:checked {
+    background-color: black !important;
+    /* Black when ON */
+    border-color: black !important;
+}
+
+.form-check-input:checked::before {
+    transform: translateX(20px);
+    /* Moves switch right */
+}
+
+.form-check-input:focus {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    /* Stronger shadow on focus */
+}
+
+.card {
+    border: none;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    height: 250px;
+    /* Adjust to match exact proportion */
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.badge-custom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 6px 10px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators button {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+.carousel {
+    position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.card {
+    border: none;
+}
+
+.card-body p {
+    margin-bottom: 4px;
+    /* Reduce line spacing */
+}
+
+
